@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+body {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.cup {
+  position: relative;
+  height: 8px;
+  width: 55px;
+  background: #ccc;
+}
+.cup:after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  width: 8px;
+  height: 25px;
+  background: #ccc;
+  bottom: 0px;
+}
+.cup:before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  width: 8px;
+  height: 25px;
+  background: #ccc;
+  bottom: 0px;
+}
+
+.slice {
+  position: absolute;
+  z-index: -1;
+  height: 8px;
+  background: #F48024;
+  width: 32px;
+  top: 0px;
+  left: 12px;
+}
+
+.slice:nth-child(1) {
+  animation: move-1 0.3s ease forwards;
+  animation-delay: 175ms;
+}
+@keyframes move-1 {
+  100% {
+    transform: rotate(6deg) translateY(-11px) translateX(-2.5px);
+  }
+}
+
+.slice:nth-child(2) {
+  animation: move-2 0.3s ease forwards;
+  animation-delay: 350ms;
+}
+@keyframes move-2 {
+  100% {
+    transform: rotate(12deg) translateY(-22px) translateX(-5px);
+  }
+}
+
+.slice:nth-child(3) {
+  animation: move-3 0.3s ease forwards;
+  animation-delay: 525ms;
+}
+@keyframes move-3 {
+  100% {
+    transform: rotate(18deg) translateY(-33px) translateX(-7.5px);
+  }
+}
+
+.slice:nth-child(4) {
+  animation: move-4 0.3s ease forwards;
+  animation-delay: 700ms;
+}
+@keyframes move-4 {
+  100% {
+    transform: rotate(24deg) translateY(-44px) translateX(-10px);
+  }
+}
+
+.slice:nth-child(5) {
+  animation: move-5 0.3s ease forwards;
+  animation-delay: 875ms;
+}
+@keyframes move-5 {
+  100% {
+    transform: rotate(30deg) translateY(-55px) translateX(-12.5px);
+  }
+}
+
+.graphic {
+  animation: shift 0.5s linear forwards;
+  animation-delay: 2s;
+}
+@keyframes shift {
+  100% {
+    transform: translateX(-75px);
+  }
+}
+
+p {
+  font-size: 22px;
+  transform: translateY(-20px);
+  opacity: 0;
+  animation: rise 0.5s linear forwards;
+  animation-delay: 2.3s;
+  letter-spacing: 2px;
+}
+@keyframes rise {
+  100% {
+    opacity: 1;
+    transform: translateY(-45px);
+  }
+}
+
+span {
+  position: relative;
+  font-weight: 700;
+  font-size: 23px;
+}
+span:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: white;
+  animation: reveal 1s linear forwards;
+  animation-delay: 2.5s;
+}
+@keyframes reveal {
+  100% {
+    width: 0px;
+  }
+} 

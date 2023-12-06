@@ -1,0 +1,220 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .head {
+    position: relative;
+    height: 80px;
+    width: 160px;
+    background: #a4c639;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+  }
+  .head div:first-child, .head div:nth-child(2) {
+    position: absolute;
+    height: 7px;
+    width: 30px;
+    border-radius: 20px;
+    background: #a4c639;
+  }
+  .head div:first-child {
+    left: 15px;
+    transform: rotate(50deg);
+  }
+  .head div:nth-child(2) {
+    transform: rotate(-50deg);
+    left: 116px;
+  }
+  .head div:nth-child(3) {
+    position: relative;
+  }
+  .head div:nth-child(3) div {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background: #FFF;
+    border-radius: 50%;
+    top: 35px;
+  }
+  .head div:nth-child(3) div:first-child {
+    left: 40px;
+  }
+  .head div:nth-child(3) div:nth-child(2) {
+    left: 107px;
+  }
+  
+  .body {
+    position: relative;
+    width: 160px;
+    height: 130px;
+    background: #a4c639;
+    margin-top: 5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .body div {
+    position: absolute;
+    width: 35px;
+    height: 110px;
+    border-radius: 30px;
+    background: #a4c639;
+  }
+  .body div:first-child {
+    left: -40px;
+    transform-origin: top;
+    animation: arm-l 0.9s infinite;
+    animation-delay: 0.45s;
+  }
+  .body div:nth-child(2) {
+    left: 165px;
+    transform-origin: top;
+    animation: arm-r 0.9s infinite;
+  }
+  .body div:nth-child(3), .body div:nth-child(4) {
+    top: 75px;
+  }
+  .body div:nth-child(3) {
+    animation: legup-l 0.9s infinite;
+    animation-delay: 0.45s;
+    left: 32px;
+  }
+  .body div:nth-child(4) {
+    animation: legup-r 0.9s infinite;
+    left: 96px;
+  }
+  
+  .shadow {
+    margin-top: -72px;
+    z-index: -2;
+    height: 30px;
+    width: 160px;
+    background: #eee;
+    border-radius: 50%;
+    animation: shadow 0.45s infinite;
+    display: flex;
+    justify-content: space-between;
+  }
+  .shadow div {
+    height: 15px;
+    width: 40px;
+    background: #eee;
+    border-radius: 50%;
+  }
+  .shadow div:first-child {
+    margin: 8px -25px;
+  }
+  .shadow div:last-child {
+    margin: 8px -25px;
+  }
+  
+  .footsteps {
+    display: flex;
+  }
+  .footsteps div {
+    height: 15px;
+    width: 30px;
+    background: gainsboro;
+    border-radius: 50%;
+    margin: 51px 20px;
+    z-index: -1;
+  }
+  .footsteps div:first-child {
+    animation: footsteps-l 0.9s infinite;
+    animation-delay: 0.45s;
+  }
+  .footsteps div:last-child {
+    animation: footsteps-r 0.9s infinite;
+  }
+  
+  .logo {
+    animation: bobble 0.45s infinite;
+  }
+  
+  @keyframes shadow {
+    50% {
+      transform: scale(0.96);
+    }
+  }
+  @keyframes footsteps-l {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(6px, -5px);
+    }
+  }
+  @keyframes footsteps-r {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-6px, -5px);
+    }
+  }
+  @keyframes bobble {
+    0% {
+      transform: translateY(-2px);
+    }
+    70% {
+      transform: translateY(2px);
+    }
+    100% {
+      transform: translateY(-2px);
+    }
+  }
+  @keyframes legup-l {
+    0% {
+      transform: translate(4px, -5px);
+    }
+    30% {
+      transform: translate(-4px, 7px);
+    }
+    100% {
+      transform: translate(4px, -5px);
+    }
+  }
+  @keyframes legup-r {
+    0% {
+      transform: translate(-4px, -5px);
+    }
+    30% {
+      transform: translate(4px, 7px);
+    }
+    100% {
+      transform: translate(-4px, -5px);
+    }
+  }
+  @keyframes arm-l {
+    0% {
+      transform: rotate(7deg);
+    }
+    60% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(7deg);
+    }
+  }
+  @keyframes arm-r {
+    0% {
+      transform: rotate(-7deg);
+    }
+    60% {
+      transform: rotate(5deg);
+    }
+    100% {
+      transform: rotate(-7deg);
+    }
+  } 
