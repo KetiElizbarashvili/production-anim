@@ -1,0 +1,51 @@
+body
+{
+	background-color: #A52A2A;
+}
+#mcstore 
+{
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  font-size:.8em;
+  padding: 7px;
+  color: white;
+  font-family: Verdana;
+}
+.mclogo
+{	  
+    stroke: #ebe014;
+    stroke-meterlimit: 10;
+    fill: none;
+	  stroke-linecap: round;
+  	stroke-linejoin: round;
+	  stroke-dasharray:20600;
+	  stroke-dashoffset:20600;
+	  animation: dash 8s linear forwards;
+    stroke-width: 15;
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }  
+}
+@-moz-keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }  
+}
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }  
+}
+#mcregister{
+  display: block;
+}
+.lovinit {
+  display: none;
+}
+center {
+  margin-top: 100px;
+}
+ 
